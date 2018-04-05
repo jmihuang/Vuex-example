@@ -1,0 +1,58 @@
+@import './normalize';
+*{
+    box-sizing: border-box;
+}
+h1, h2 {
+    font-weight: normal;
+  }
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  a {
+    color: #42b983;
+    text-decoration: none;
+    &:hover{
+        text-decoration: underline;
+    }
+  }
+
+  .clearfix:after {
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.clearfix {display: inline-block;}
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+.clearfix {display: block;}
+/* End hide from IE-mac */
+
+aside{
+    &.aside{
+        float:left;
+        width:25%;
+        padding:10px;
+      }
+}
+  
+  .content{
+    width:75%;
+    padding:20px;
+    float:right;
+  }
+
+  footer{
+      color:#fff;
+      line-height: 24px;
+      text-align: center;
+      background-color:#42b983;
+  }
