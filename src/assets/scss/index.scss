@@ -10,7 +10,7 @@ h1, h2 {
     padding: 0;
   }
   li {
-    display: inline-block;
+    display: block;
     margin: 0 10px;
   }
   a {
@@ -38,12 +38,18 @@ h1, h2 {
 
 aside{
     &.aside{
+        color: #42b983;
         float:left;
         width:25%;
         padding:10px;
+        li::before{
+          content:'›';
+          padding:5px;
+        }
       }
+      
 }
-  
+ 
   .content{
     width:75%;
     padding:20px;
