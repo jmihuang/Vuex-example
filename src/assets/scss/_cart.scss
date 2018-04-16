@@ -1,0 +1,43 @@
+.lessonlist{
+    width:45%;
+    padding:20px;
+}   
+
+.lessonlist h2{
+    font-size:16px;
+    padding-bottom:10px;
+}
+
+.lessonlist span{
+    color:$main-color;
+}
+
+.lessonlist .currency{
+    display:block;
+}
+
+.cart-info{
+    position: fixed;
+    top:0;
+    left:0;
+    width:100%;
+    color:#fff;
+    padding:10px;
+    background-color: $main-color;
+}
+.cart-info b{
+    padding:0 10px;
+}
+
+.add-cart{
+    display:block;
+    border-radius: 10px;
+    text-align:center;
+    line-height:24px;
+    background-color: $main-color;
+    &:disabled{
+        cursor: not-allowed;
+        opacity: 0.5;
+        text-decoration: none;
+    }
+}
