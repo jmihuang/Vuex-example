@@ -12,7 +12,6 @@ const account = {
 
 export default new Vuex.Store({
     modules: {
-        account,
         cart,
     }
 })

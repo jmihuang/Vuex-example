@@ -2,28 +2,31 @@ import api from '../../api/shop';
 
 const state = {
     lessons: [],
-    cart: []
+    cartlist: []
 }
 
 
 const getters = {
     cartLength(state) {
-        return state.cart.length;
+        return state.cartlist.length;
     },
     cartTotal(state) {
-        return state.cart
+        return state.cartlist
             .reduce((acc, lesson) => {
                 return acc + lesson.price
             }, 0)
     },
     isLessonInCart(state) {
-        return (lesson) => {
+        return function () {
             console.log(lesson);
-            return state.cart.
-                findIndex((el) => {
-                    return el.id === lesson.id;
-                }) !== -1;
         };
+        // return (lesson) => {
+        //     console.log(lesson);
+        //     return state.cartlist.
+        //         findIndex((el) => {
+        //             return el.id === lesson.id;
+        //         }) !== -1;
+        // };
     }
 }
 
@@ -32,7 +35,7 @@ const mutations = {
         state.lessons = rs;
     },
     addToCart(state, lesson) {
-        state.cart.push(lesson);
+        state.cartlist.push(lesson);
     }
 }
 

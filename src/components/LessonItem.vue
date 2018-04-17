@@ -7,7 +7,7 @@
             <span>{{teachers}}</span>
             <input type="button" class = "white-text add-cart" 
                 @click = "addToCart(lesson)"
-                :disabled = "!isLessonInCart"
+                :disabled = "isLessonInCart"
                 value="加入購物車"
             >   
         </div>  
@@ -25,7 +25,17 @@ export default {
             .map( t => t.username)
             .join(', ');
        },
-      ...mapGetters(['isLessonInCart'])
+       isLessonInCart(){
+           let newarr = 
+           this.cartlist.findIndex((el)=>{
+               return el.id === this.lesson.id
+           }) ;
+           return newarr !== -1;
+       },
+    ...mapState({
+         cartlist: state => state.cart.cartlist
+      })
+    //   ...mapGetters(['isLessonInCart'])
   },
   methods:{  
       ...mapMutations(['addToCart']),
