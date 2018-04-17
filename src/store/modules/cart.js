@@ -17,7 +17,13 @@ const getters = {
             }, 0)
     },
     isLessonInCart(state) {
-        console.log(lesson);
+        return (lesson) => {
+            console.log(lesson);
+            return state.cart.
+                findIndex((el) => {
+                    return el.id === lesson.id;
+                }) !== -1;
+        };
     }
 }
 

@@ -5,9 +5,9 @@
             <h2>{{lesson.title}}</h2>
             <span class="float-right currency">${{lesson.price}}</span>
             <span>{{teachers}}</span>
-            <input type="button" class="white-text add-cart" 
-                @click="addToCart(lesson)"
-                :disabled="isLessonInCart"
+            <input type="button" class = "white-text add-cart" 
+                @click = "addToCart(lesson)"
+                :disabled = "!isLessonInCart"
                 value="加入購物車"
             >   
         </div>  
