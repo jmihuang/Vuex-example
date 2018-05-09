@@ -7,6 +7,9 @@ const state = {
 
 
 const getters = {
+    courses(state) {
+        return state.lessons.courses;
+    },
     cartLength(state) {
         return state.cartlist.length;
     },
@@ -27,7 +30,7 @@ const getters = {
         //             return el.id === lesson.id;
         //         }) !== -1;
         // };
-    }
+    },
 }
 
 const mutations = {

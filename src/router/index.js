@@ -2,6 +2,9 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/components/Home'
 import ShppingCart from '@/components/ShppingCart'
+import Search from '@/components/Search'
+import RunNumber from '@/components/RunNumber'
+import FbLogin from '@/components/FbLogin'
 
 Vue.use(Router)
 
@@ -16,12 +19,27 @@ export default new Router({
           path: 'shppingCart',
           name: 'ShppingCart',
           component: ShppingCart
+        },
+        {
+          path: 'search',
+          name: 'Search',
+          component: Search
+        },
+        {
+          path: 'runnumber',
+          name: 'RunNumber',
+          component: RunNumber
+        },
+        {
+          path: 'fblogin',
+          name: 'FbLogin',
+          component: FbLogin
         }
       ]
     }
   ]
 })
-
+FbLogin
       // routes: [
       //   {
       //     path: '/',
