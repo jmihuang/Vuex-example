@@ -5,6 +5,7 @@ import ShppingCart from '@/components/ShppingCart'
 import Search from '@/components/Search'
 import RunNumber from '@/components/RunNumber'
 import FbLogin from '@/components/FbLogin'
+import InfiniteScroll from '@/components/InfiniteScroll'
 
 Vue.use(Router)
 
@@ -34,6 +35,11 @@ export default new Router({
           path: 'fblogin',
           name: 'FbLogin',
           component: FbLogin
+        },
+        {
+          path: 'infiniteScroll',
+          name: 'InfiniteScroll',
+          component: InfiniteScroll
         }
       ]
     }

@@ -6,6 +6,7 @@
         <li><router-link :to="{name:'Search'}">Search</router-link></li>
         <li><router-link :to="{name:'RunNumber'}">RunNumber</router-link></li>
         <li><router-link :to="{name:'FbLogin'}">FbLogin</router-link></li>
+        <li><router-link :to="{name:'InfiniteScroll'}">InfiniteScroll</router-link></li>
       </ul>
     </aside>
     </div>
